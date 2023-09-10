@@ -1,0 +1,89 @@
+:root {
+  --background-color-light: white;
+  --text-color-light: black;
+  --background-color-dark: #333;
+  --text-color-dark: white;
+}
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+.light-mode {
+  /* Define your light theme styles here */
+  background-color: white;
+  color: black;
+}
+
+/* Dark Mode */
+.dark-mode {
+  /* Define your dark theme styles here */
+  background-color: black;
+  color: white;
+}
+
+#s1{
+  overflow: hidden; 
+  border-right: .15em solid; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .15em; 
+  animation: 
+    typing 5s,
+    blink-caret .5s step-end infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 28% }
+}
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+  
+}
+.glow {
+  animation: glowAnimation 2s ease-in-out infinite;
+}
+
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 10px #83f683, 0 0 20px #71f971, 0 0 30px #91fb91;
+  }
+  20% {
+    box-shadow: 0 0 20px #83f683, 0 0 30px #71f971, 0 0 40px #91fb91;
+  }
+  100% {
+    box-shadow: 0 0 10px #83f683, 0 0 20px #71f971, 0 0 30px #91fb91
+    ;
+  }
+}
+.emoji{
+  font-size: 90px;
+  align-items: center;
+  display:flex;
+  justify-content: center;
+  animation-name: wave-animation;  
+  animation-duration: 2.5s;        
+  animation-iteration-count: infinite;  
+  transform-origin: 55% 55%;  
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+   10% { transform: rotate(14.0deg) } 
+   20% { transform: rotate(-8.0deg) }
+   30% { transform: rotate(14.0deg) }
+   40% { transform: rotate(-4.0deg) }
+   50% { transform: rotate(10.0deg) }
+   60% { transform: rotate( 0.0deg) } 
+  100% { transform: rotate( 0.0deg) }
+}
+
+
